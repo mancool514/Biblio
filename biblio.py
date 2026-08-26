@@ -1,5 +1,32 @@
 import json
 
+import json
+
+class LivreBiblio:
+    def __init__(self,titre,annee,):
+        self.titre = titre
+        self.annee = annee
+        self.emprunte = False
+
+    def emprunter(self):
+        if not self.emprunte:
+            self.emprunte = True
+            return True
+        else:
+            return False
+
+
+    def rendre(self):
+        if self.emprunte:
+            self.emprunte = False
+            return False
+        else:
+            return True
+
+polo = LivreBiblio("polo",2009)
+print(polo.emprunter())
+print(polo.emprunter())
+print(polo.rendre())
 
 
 
