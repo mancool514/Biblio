@@ -3,7 +3,7 @@ import json
 
 class LivreBiblio:
     def __init__(self):
-        with open("livre.json", "r") as file:
+        with open("db/livre.json", "r") as file:
             self.data = json.load(file) # ouvre la base de donne et la met sous forme dun dictionaire a linitialisation de la classe
 
     def get_input(self):
@@ -11,7 +11,7 @@ class LivreBiblio:
         return self.user_input
     
     def search(self, userInput):        # la fonction a pour but de fair eune recherche dans la base de donne et retourner a lutilisateur les resultats
-        self.user_input = self.user_input.lower().strip()
+        self.user_input = self.get_input().lower().strip()
         resultat = [
             livre for livre in self.data
             if self.user_input in livre["titre"].lower() or self.user_input in livre["auteur"].lower()
@@ -39,15 +39,18 @@ class LivreBiblio:
                 if livre["disponible"]:
                     print("livre emprunter")
                     livre["quantite_totale"] -= 1
-
+                    return livre["titre"]
+                    
                 else:
                     print("le livre est non disponible")
+                    return -1
 
             if livre["quantite_totale"] == 0:
                 livre["disponible"] = False
 
         else:
             print("le livre n'existe pas")
+            return -1
 
 
 
@@ -61,11 +64,33 @@ class LivreBiblio:
         ]
 
         if resultat:
+
             for livre in resultat:
                 if not livre["disponible"]:
                     livre["disponible"] = True
 
                 livre["quantite_totale"] += 1
+            return titre
+
+        else:
+            print("le livre existe pas")
+            return -1
+
+
+    def reverse_emprunt(self, titre):
+        titre = titre.lower().strip()
+        
+        resultat = [
+            livre for livre in self.data
+            if titre in livre["titre"].lower()
+        ]
+
+        if resultat:
+            for livre in resultat:
+                if livre["disponible"]:
+                    livre["disponible"] = False
+
+                livre["quantite_totale"] -= 1
 
         else:
             print("le livre existe pas")
@@ -74,5 +99,5 @@ class LivreBiblio:
         print(self.data)
 
     def save_file(self):
-        with open("livre.json", "w") as file:
+        with open("db/livre.json", "w") as file:
             json.dump(self.data, file, indent=4)
