@@ -20,7 +20,7 @@ def charger(file_charger):
     except FileNotFoundError:
         return {}
 
-def ajouter_livre(livre,annee_ecriture,dictionnaire_livre):
+def ajouter_livre(livre,annee_ecriture:int,dictionnaire_livre):
     if livre in dictionnaire_livre:
         return "Nous avons déjà ce livre."
     else:
