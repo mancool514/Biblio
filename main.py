@@ -30,7 +30,11 @@ def rendre():
     user.emprunt.remove(titre)
 
 def user_input():
-    return input("que voulez vous faire\n1: emprunter\n2: chercher\n3: retourner un livre\n4: changer le mot de passe\n>>> ")
+    return input("que voulez vous faire\n1: emprunter\n2: chercher\n3: retourner un livre\n4: changer le mot de passe\n5: voir cest emprunt actif \n>>> ")
+
+def print_emprunt():
+    for i in user.emprunt:
+        print(i)
 
 def main():
     choix = user_input()
@@ -43,6 +47,8 @@ def main():
             rendre()
         case "4":
             user.change_mdp()
+        case "5":
+            print_emprunt()
         case _:
             print("commande non reconnu")
 

@@ -1,5 +1,6 @@
 import json
 import bcrypt
+import stdiomask
 
 
 class User:
@@ -13,8 +14,7 @@ class User:
             self.add_user()
 
 
-        mdp = input("entrez votre mot de passe >>> ")
-
+        mdp = stdiomask.getpass(prompt="Entrez votre mot de passe >>> ", mask="*")
         mdp = mdp.encode("utf-8")
         encoded_mdp = self.users[self.user_name]["mot_de_passe"].encode("utf-8")
 
@@ -41,7 +41,7 @@ class User:
             self.users[self.user_name]["mot_de_passe"] = hashed_bytes.decode("utf-8")
 
     def add_user(self):
-        user = input("entrez votre nom dutilisatuer >>> ")
+        user = input("entrez votre nom d'utilisatuer >>> ")
         pwd = input("entrez votre mot de passe >>> ")
         pwd = pwd.encode("utf-8")
         salt = bcrypt.gensalt()
