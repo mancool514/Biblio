@@ -1,46 +1,37 @@
-{
-    "lolo": {
-        "ann\u00e9e": 2009,
-        "emprunte": true
+[
+    {
+        "id": 1,
+        "titre": "Le Petit Prince",
+        "auteur": "Antoine de Saint-Exupery",
+        "quantite_totale": 4,
+        "disponible": true
     },
-    "lala": {
-        "ann\u00e9e": 2009,
-        "emprunte": false
+    {
+        "id": 2,
+        "titre": "1984",
+        "auteur": "George Orwell",
+        "quantite_totale": 3,
+        "disponible": true
     },
-    "lqlqlq": {
-        "ann\u00e9e": 2009,
-        "emprunte": false
+    {
+        "id": 3,
+        "titre": "L'etranger",
+        "auteur": "Albert Camus",
+        "quantite_totale": 0,
+        "disponible": false
     },
-    "ksks": {
-        "ann\u00e9e": 2009,
-        "emprunte": false
+    {
+        "id": 4,
+        "titre": "Harry Potter a l'ecole des sorciers",
+        "auteur": "J.K. Rowling",
+        "quantite_totale": 8,
+        "disponible": true
     },
-    "qqw": {
-        "ann\u00e9e": 2,
-        "emprunte": false
-    },
-    "asa": {
-        "ann\u00e9e": 3,
-        "emprunte": false
-    },
-    "oo": {
-        "ann\u00e9e": 9,
-        "emprunte": false
-    },
-    "y": {
-        "ann\u00e9e": 7,
-        "emprunte": false
-    },
-    "q": {
-        "ann\u00e9e": 1,
-        "emprunte": false
-    },
-    "i": {
-        "ann\u00e9e": 0,
-        "emprunte": false
-    },
-    "la": {
-        "ann\u00e9e": 2009,
-        "emprunte": false
+    {
+        "id": 5,
+        "titre": "Les Miserables",
+        "auteur": "Victor Hugo",
+        "quantite_totale": 2,
+        "disponible": true
     }
-}
+]
