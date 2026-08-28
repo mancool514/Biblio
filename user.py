@@ -14,9 +14,6 @@ class User:
             self.add_user()
 
 
-        mdp = stdiomask.getpass(prompt="Entrez votre mot de passe >>> ", mask="*")
-        mdp = mdp.encode("utf-8")
-        encoded_mdp = self.users[self.user_name]["mot_de_passe"].encode("utf-8")
 
         if bcrypt.checkpw(mdp, encoded_mdp):
             print("login reussi")
