@@ -36,7 +36,8 @@ def print_emprunt():
     for i in user.emprunt:
         print(i)
 
-def main():
+
+while True:
     choix = user_input()
     match choix:
         case "1":
