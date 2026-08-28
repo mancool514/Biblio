@@ -13,6 +13,7 @@ class User:
         if self.user_name == "-a":
             self.add_user()
 
+        mdp = input("Entrez votre mot de passe >>> ")
 
 
         if mdp == self.users[self.user_name]["mot_de_passe"]:
