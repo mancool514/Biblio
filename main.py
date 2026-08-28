@@ -1,4 +1,4 @@
-from biblio import LivreBiblio
+from LivreBiblio import LivreBiblio
 from user import User
 
 user = User()
