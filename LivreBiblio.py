@@ -38,8 +38,8 @@ class LivreBiblio:
             for titre in resultat:
                 if titre["disponible"]:
                     print("livre emprunter")
-                    livre["quantite_totale"] -= 1
-                    return livre["titre"]
+                    titre["quantite_totale"] -= 1
+                    return titre["titre"]
                     
                 else:
                     print("le livre est non disponible")
