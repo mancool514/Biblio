@@ -30,7 +30,7 @@ def rendre():
     user.emprunt.remove(titre)
 
 def user_input():
-    return input("que voulez vous faire\n1: emprunter\n2: chercher\n3: retourner un livre\n4: changer le mot de passe\n5: voir cest emprunt actif \n>>> ")
+    return input("que voulez vous faire\n1: emprunter\n2: chercher\n3: retourner un livre\n4: changer le mot de passe\n5: voir cest emprunt actif \n6: quitter \n>>> ")
 
 def print_emprunt():
     for i in user.emprunt:
