@@ -15,7 +15,7 @@ class User:
 
 
 
-        if bcrypt.checkpw(mdp, encoded_mdp):
+        if mdp == self.users[self.user_name]["mot_de_passe"]:
             print("login reussi")
             self.emprunt = self.users[self.user_name]["emprunt"]
             return True
