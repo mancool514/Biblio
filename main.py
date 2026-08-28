@@ -49,6 +49,9 @@ def main():
             user.change_mdp()
         case "5":
             print_emprunt()
+        case "6":
+            user.logout()
+            break
         case _:
             print("commande non reconnu")
 
