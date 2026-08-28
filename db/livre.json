@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "titre": "Le Petit Prince",
+        "auteur": "Antoine de Saint-Exupery",
+        "quantite_totale": 4,
+        "disponible": true
+    },
+    {
+        "id": 2,
+        "titre": "1984",
+        "auteur": "George Orwell",
+        "quantite_totale": 3,
+        "disponible": true
+    },
+    {
+        "id": 3,
+        "titre": "L'etranger",
+        "auteur": "Albert Camus",
+        "quantite_totale": 0,
+        "disponible": false
+    },
+    {
+        "id": 4,
+        "titre": "Harry Potter a l'ecole des sorciers",
+        "auteur": "J.K. Rowling",
+        "quantite_totale": 8,
+        "disponible": true
+    },
+    {
+        "id": 5,
+        "titre": "Les Miserables",
+        "auteur": "Victor Hugo",
+        "quantite_totale": 2,
+        "disponible": true
+    }
+]
