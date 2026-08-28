@@ -54,7 +54,3 @@ def main():
             break
         case _:
             print("commande non reconnu")
-
-main()
-user.logout()
-biblio.save_file()
