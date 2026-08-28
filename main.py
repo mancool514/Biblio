@@ -1,11 +1,10 @@
-from LivreBiblio import LivreBiblio
+from livrebiblio import LivreBiblio
 from user import User
 
 user = User()
 biblio = LivreBiblio()
 
-if not user.login():
-    raise PermissionError("mot de passe ou nom dutilisateur invalide")
+
 
 
 
@@ -36,22 +35,30 @@ def print_emprunt():
     for i in user.emprunt:
         print(i)
 
+def main():
+    if not user.login():
+        raise PermissionError("mot de passe ou nom dutilisateur invalide")
 
-while True:
-    choix = user_input()
-    match choix:
-        case "1":
-            emprunt()
-        case "2":
-            biblio.search()
-        case "3":
-            rendre()
-        case "4":
-            user.change_mdp()
-        case "5":
-            print_emprunt()
-        case "6":
-            user.logout()
-            break
-        case _:
-            print("commande non reconnu")
+    while True:
+        choix = user_input()
+        match choix:
+            case "1":
+                emprunt()
+            case "2":
+                biblio.search()
+            case "3":
+                rendre()
+            case "4":
+                user.change_mdp()
+            case "5":
+                print_emprunt()
+            case "6":
+                break
+            case _:
+                print("commande non reconnu")
+
+    user.logout()
+
+
+if __name__ == "__main__":
+    main()

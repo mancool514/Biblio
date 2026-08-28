@@ -4,5 +4,9 @@
         "emprunt": [
             "le petit prince"
         ]
+    },
+    "manu": {
+        "mot_de_passe": "$2b$12$IptkZDwIixmZOB.IiY58f./PEIf8Uo0eZilTHtZeCdRTS9TvUPTNu",
+        "emprunt": []
     }
 }

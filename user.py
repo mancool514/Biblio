@@ -1,5 +1,6 @@
 import json
 import bcrypt
+import stdiomask
 
 
 
@@ -13,10 +14,12 @@ class User:
         if self.user_name == "-a":
             self.add_user()
 
-        mdp = input("Entrez votre mot de passe >>> ")
 
+        mdp = stdiomask.getpass(prompt="Entrez votre mot de passe >>> ", mask="*")
+        mdp = mdp.encode("utf-8")
+        encoded_mdp = self.users[self.user_name]["mot_de_passe"].encode("utf-8")
 
-        if mdp == self.users[self.user_name]["mot_de_passe"]:
+        if bcrypt.checkpw(mdp, encoded_mdp):
             print("login reussi")
             self.emprunt = self.users[self.user_name]["emprunt"]
             return True
