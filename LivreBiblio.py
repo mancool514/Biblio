@@ -10,7 +10,7 @@ class LivreBiblio:
         self.user_input = input("entrez le nom du livre ou l'auteur >>> ")
         return self.user_input
     
-    def search(self, userInput):        # la fonction a pour but de fair eune recherche dans la base de donne et retourner a lutilisateur les resultats
+    def search(self):        # la fonction a pour but de fair eune recherche dans la base de donne et retourner a lutilisateur les resultats
         self.user_input = self.get_input().lower().strip()
         resultat = [
             livre for livre in self.data
