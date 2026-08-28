@@ -45,8 +45,9 @@ class LivreBiblio:
                     print("le livre est non disponible")
                     return -1
 
-            if livre["quantite_totale"] == 0:
-                livre["disponible"] = False
+            if titre["quantite_totale"] == 0:
+                titre["disponible"] = False
+            return -1
 
         else:
             print("le livre n'existe pas")
