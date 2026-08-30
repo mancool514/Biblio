@@ -60,3 +60,13 @@ class User:
         with open("db/utilisateur.json", "w") as file:
             json.dump(self.users, file, indent=4)
         quit()
+
+    def delete_user(self):
+        user = input("entrez le nom dutilisateur >>> ")
+        try:
+            del self.users[user]
+
+        except:
+            raise ValueError("l'utilisateur nexiste pas")
+
+    
