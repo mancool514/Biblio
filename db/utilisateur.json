@@ -5,8 +5,12 @@
             "le petit prince"
         ]
     },
+    "sudo": {
+        "mot_de_passe": "$2b$12$kM.c8H5pWwPWDzVkj8r7cenmRI.hYRck8Nbfl2DeWLAa5ySVWwUmi",
+        "emprunt": []
+    },
     "manu": {
-        "mot_de_passe": "$2b$12$IptkZDwIixmZOB.IiY58f./PEIf8Uo0eZilTHtZeCdRTS9TvUPTNu",
+        "mot_de_passe": "$2b$12$bVLEm8n9GdJ..D8CL5pzZeTM/eccshCWUIAoCKGzGceBhFgRwJSiO",
         "emprunt": []
     }
 }
