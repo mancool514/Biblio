@@ -3,7 +3,7 @@ import json
 
 class LivreBiblio:
     def __init__(self):
-        with open("db/livre.json", "r") as file:
+        with open("db/bibliotheque.json", "r") as file:
             self.data = json.load(file) # ouvre la base de donne et la met sous forme dun dictionaire a linitialisation de la classe
 
     def get_input(self):
@@ -100,5 +100,5 @@ class LivreBiblio:
         print(self.data)
 
     def save_file(self):
-        with open("db/livre.json", "w") as file:
+        with open("db/bibliotheque.json", "w") as file:
             json.dump(self.data, file, indent=4)
