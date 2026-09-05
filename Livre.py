@@ -23,5 +23,3 @@ class Livre:
     def afficher_stock(self):
         return self.quantite_disponible
 
-m = Livre(12,"Livre","",0)
-print(m.est_disponible())
