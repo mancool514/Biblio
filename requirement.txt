@@ -1,0 +1,2 @@
+bcrypt==5.0.0
+stdiomask==0.0.6
