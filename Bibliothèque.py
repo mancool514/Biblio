@@ -21,7 +21,10 @@ class Bibliotheque:
             livre for livre in self.bibliotheque
             if titre in livre.titre.lower()
         ]
-        return resultat[0] if len(resultat) > 0 else False
+        liste_resultat = []
+        for livre in resultat:
+            liste_resultat.append(livre)
+        return liste_resultat if len(resultat) > 0 else False
 
     def sauvegarde(self):
         donne_json = []
