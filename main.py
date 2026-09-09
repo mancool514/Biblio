@@ -15,7 +15,10 @@ def inscription(username, password):
 def rechercher_livre(livre):
     livre_objet = bibliotheque.rechercher(livre)
     if livre_objet:
-        return f"\ntitre: {livre_objet.titre} \nstock: {livre_objet.quantite_disponible}"
+        liste_livre_objet = []
+        for livre in livre_objet:
+            liste_livre_objet.append(livre.titre)
+        return  liste_livre_objet
     else:
         return "Livre non retrouvé"
 
