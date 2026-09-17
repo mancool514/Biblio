@@ -26,7 +26,7 @@ def voir_livres_emprunter(utilisateur):
     return utilisateur.livres_empruntes
 
 def emprunter_livre(livre,utilisateur):
-    livre_objet = bibliotheque.rechercher(livre)
+    livre_objet = bibliotheque.rechercher(livre)[0]
     if livre_objet:
         if livre_objet.est_disponible():
             if not len(utilisateur.livres_empruntes) >= 4:
