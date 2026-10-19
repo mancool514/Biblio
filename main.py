@@ -22,9 +22,6 @@ def rechercher_livre(livre):
     else:
         return "Livre non retrouvé"
 
-def voir_livres_emprunter(utilisateur):
-    return utilisateur.livres_empruntes
-
 def emprunter_livre(livre,utilisateur):
     livre_objet = bibliotheque.rechercher(livre)[0]
     if livre_objet:
