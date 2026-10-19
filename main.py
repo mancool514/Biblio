@@ -88,7 +88,8 @@ def main():
                             livre_rendu = input("Entrer le nom du livre: ")
                             print(retourner_livre(livre_rendu,utilisateur_connecte))
                         case "4":
-                           print(voir_livres_emprunter(utilisateur_connecte))
+                           for i in utilisateur_connecte.livres_empruntes:
+                               print(i)
                         case "5":
                             break
                         case _:
